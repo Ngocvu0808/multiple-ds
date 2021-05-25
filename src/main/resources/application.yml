@@ -1,0 +1,31 @@
+#-----------first datasource-------------
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/base
+    username: root
+    password: root
+
+
+  #---second datasource-------------
+
+  second-datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/info
+    username: root
+    password: root
+
+  #jpa
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        hbm2ddl:
+          auto: true
+    show-sql: false
+
+  #beans
+  main:
+    allow-bean-definition-overriding: true
